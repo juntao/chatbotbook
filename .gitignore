@@ -1,7 +1,13 @@
 *.class
 
+# MAC
+.DS_Store
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# IDEA
+.idea/
 
 # Package Files #
 *.jar

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+    <!-- Facebook -->
+    <servlet>
+      <servlet-name>FacebookEchoBasicServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.facebook.EchoBasicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FacebookEchoBasicServlet</servlet-name>
+      <url-pattern>/facebook/echo_basic</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>FacebookEchoServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.facebook.EchoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FacebookEchoServlet</servlet-name>
+      <url-pattern>/facebook/echo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>FacebookGreetServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.facebook.GreetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>FacebookGreetServlet</servlet-name>
+      <url-pattern>/facebook/greet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Slack -->
+    <servlet>
+      <servlet-name>SlackCommandEchoBasicServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.slack.command.EchoBasicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SlackCommandEchoBasicServlet</servlet-name>
+      <url-pattern>/slack/command/echo_basic</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SlackCommandEchoServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.slack.command.EchoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SlackCommandEchoServlet</servlet-name>
+      <url-pattern>/slack/command/echo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SlackCommandGreetServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.slack.command.GreetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SlackCommandGreetServlet</servlet-name>
+      <url-pattern>/slack/command/greet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SlackChannelEchoBasicServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.slack.channel.EchoBasicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SlackChannelEchoBasicServlet</servlet-name>
+      <url-pattern>/slack/channel/echo_basic</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SlackChannelEchoServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.slack.channel.EchoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SlackChannelEchoServlet</servlet-name>
+      <url-pattern>/slack/channel/echo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SlackChannelGreetServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.slack.channel.GreetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SlackChannelGreetServlet</servlet-name>
+      <url-pattern>/slack/channel/greet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Meta data -->
+    <mime-mapping>
+        <extension>jsp</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <session-config>
+        <session-timeout>1440</session-timeout>
+    </session-config>
+
+</web-app>
