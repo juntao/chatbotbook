@@ -22,11 +22,16 @@
   $bot_says = converse ($human_says, $chat_context);
   CacheManager::set($chat_id . "_context", $chat_context, 600); // cache for 600 seconds
 
-  if (is_null($bot_says) || trim($bot_says)==false) {
+  if (is_null($bot_says)) {
     $bot_says = "Sorry, I cannot understand you!";
   }
 
-  echo htmlspecialchars($bot_says);
+  if (is_array($bot_says)) {
+    header('Content-type: application/json');
+    echo json_encode($bot_says);
+  } else {
+    echo htmlspecialchars($bot_says);
+  }
 
 
   // INPUT PARAMS

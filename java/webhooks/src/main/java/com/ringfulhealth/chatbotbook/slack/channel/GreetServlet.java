@@ -4,7 +4,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class GreetServlet extends BaseServlet {
 
-    public String converse (String human, ConcurrentHashMap<String, Object> context) {
+    public Object converse (String human, ConcurrentHashMap<String, Object> context) {
         System.out.println("GreetServlet converse");
         if (!context.containsKey("status")) {
             context.put("status", "wait_for_name");

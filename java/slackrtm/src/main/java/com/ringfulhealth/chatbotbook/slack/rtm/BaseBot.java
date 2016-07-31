@@ -39,7 +39,7 @@ public abstract class BaseBot {
 
                 }
 
-                String bot_says = converse(slackMessagePosted.getMessageContent(), context);
+                String bot_says = converse(slackMessagePosted.getMessageContent().trim(), context);
                 if (bot_says == null || bot_says.trim().isEmpty()) {
                     bot_says = "Sorry, I cannot understand you!";
                 }

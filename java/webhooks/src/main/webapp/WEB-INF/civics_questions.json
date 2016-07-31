@@ -1,0 +1,674 @@
+[
+  {
+    "id" : 1,
+    "question" : "What is the supreme law of the land?",
+    "answer" : "the Constitution",
+    "score" : "Constitution",
+    "repeat" : 1
+  },
+  {
+    "id" : 2,
+    "question" : "What does the Constitution do?",
+    "answer" : "it sets up the government",
+    "score" : "(set.*up\\s+.*gov)|(define\\s+.*gov)|(protect.*\\s+right.*\\s+.*American)",
+    "repeat" : 1
+  },
+  {
+    "id" : 3,
+    "question" : "The idea of self-government is in the first three words of the Constitution. What are these words?",
+    "answer" : "we the people",
+    "score" : "we the people",
+    "repeat" : 1
+  },
+  {
+    "id" : 4,
+    "question" : "What is an amendment?",
+    "answer" : "A change to the Constitution",
+    "score" : "(change)|(addition)",
+    "repeat" : 1
+  },
+  {
+    "id" : 5,
+    "question" : "What do we call the first ten amendments to the Constitution?",
+    "answer" : "the Bill of Rights",
+    "score" : "bill.+rights",
+    "repeat" : 1
+  },
+  {
+    "id" : 6,
+    "question" : "What is one right or freedom from the First Amendment?",
+    "answer" : "speech, religion, assembly, press, petition the government",
+    "score" : "(speech)|(religion)|(assembly)|(press)|(petition)",
+    "repeat" : 1
+  },
+  {
+    "id" : 7,
+    "question" : "How many amendments does the Constitution have?",
+    "answer" : "27",
+    "score" : "(27)|(twenty seven)|(twenty-seven)",
+    "repeat" : 1
+  },
+  {
+    "id" : 8,
+    "question" : "What did the Declaration of Independence do?",
+    "answer" : "announced our independence (from Great Britain)",
+    "score" : "(independence)|(states\\s+.*free)",
+    "repeat" : 1
+  },
+  {
+    "id" : 9,
+    "question" : "What are two rights in the Declaration of Independence?",
+    "answer" : "life, liberty, pursuit of happiness",
+    "score" : "(life)|(happiness)|(liberty)",
+    "repeat" : 2
+  },
+  {
+    "id" : 10,
+    "question" : "What is freedom of religion?",
+    "answer" : "You can practice any religion, or not practice a religion.",
+    "score" : "any\\s+religion",
+    "repeat" : 1
+  },
+  {
+    "id" : 11,
+    "question" : "What is the economic system in the United States?",
+    "answer" : "capitalist economy",
+    "score" : "(capitalism)|(capitalist)|(market)",
+    "repeat" : 1
+  },
+  {
+    "id" : 12,
+    "question" : "What is the rule of law?",
+    "answer" : "Everyone must follow the law.",
+    "score" : "(((follow)|(obey))\\s.*law)|(no.*above.*law)",
+    "repeat" : 1
+  },
+  {
+    "id" : 13,
+    "question" : "Name one branch or part of the government.",
+    "answer" : "legislative, executive, and judicial",
+    "score" : "(legislative)|(congress)|(executive)|(president)|(judicial)|(court)",
+    "repeat" : 1
+  },
+  {
+    "id" : 14,
+    "question" : "What stops one branch of government from becoming too powerful?",
+    "answer" : "checks and balances",
+    "score" : "((?=.*check)(?=.*balance))|(separation\\s+.*power)",
+    "repeat" : 1
+  },
+  {
+    "id" : 15,
+    "question" : "Who is in charge of the executive branch?",
+    "answer" : "the President",
+    "score" : "(president)|(potus)",
+    "repeat" : 1
+  },
+  {
+    "id" : 16,
+    "question" : "Who makes federal laws?",
+    "answer" : "Congress",
+    "score" : "(congress)|(legislative)|(legislature)|(legislator)|((?=.*senate)(?=.*house))",
+    "repeat" : 1
+  },
+  {
+    "id" : 17,
+    "question" : "What are the two parts of the U.S. Congress?",
+    "answer" : "the Senate and House (of Representatives)",
+    "score" : "(senate)|(house)",
+    "repeat" : 2
+  },
+  {
+    "id" : 18,
+    "question" : "How many U.S. Senators are there?",
+    "answer" : "100",
+    "score" : "(100)|(one hundred)|(a hundred)",
+    "repeat" : 1
+  },
+  {
+    "id" : 19,
+    "question" : "We elect a U.S. Senator for how many years?",
+    "answer" : "6",
+    "score" : "(6)|(six)",
+    "repeat" : 1
+  },
+  {
+    "id" : 21,
+    "question" : "The House of Representatives has how many voting members?",
+    "answer" : "435",
+    "score" : "(435)|(four hundred thirty five)",
+    "repeat" : 1
+  },
+  {
+    "id" : 22,
+    "question" : "We elect a U.S. Representative for how many years?",
+    "answer" : "2",
+    "score" : "(2)|(two)",
+    "repeat" : 1
+  },
+  {
+    "id" : 24,
+    "question" : "Who does a U.S. Senator represent?",
+    "answer" : "all people of the state",
+    "score" : "all\\s+.*state",
+    "repeat" : 1
+  },
+  {
+    "id" : 25,
+    "question" : "Why do some states have more Representatives than other states?",
+    "answer" : "(because of) the state’s population",
+    "score" : "(population)|(more\\s+.*people)",
+    "repeat" : 1
+  },
+  {
+    "id" : 26,
+    "question" : "We elect a President for how many years?",
+    "answer" : "4",
+    "score" : "(4)|(four)",
+    "repeat" : 1
+  },
+  {
+    "id" : 27,
+    "question" : "In what month do we vote for President?",
+    "answer" : "November",
+    "score" : "(nov)|(11)",
+    "repeat" : 1
+  },
+  {
+    "id" : 28,
+    "question" : "What is the name of the President of the United States now?",
+    "answer" : "Barack Obama",
+    "score" : "obama",
+    "repeat" : 1
+  },
+  {
+    "id" : 29,
+    "question" : "What is the name of the Vice President of the United States now?",
+    "answer" : "Joseph R. Biden, Jr.",
+    "score" : "biden",
+    "repeat" : 1
+  },
+  {
+    "id" : 30,
+    "question" : "If the President can no longer serve, who becomes President?",
+    "answer" : "the Vice President",
+    "score" : "vice\\s+.*president",
+    "repeat" : 1
+  },
+  {
+    "id" : 31,
+    "question" : "If both the President and the Vice President can no longer serve, who becomes President?",
+    "answer" : "the Speaker of the House",
+    "score" : "(?=.*speaker)(?=.*house)",
+    "repeat" : 1
+  },
+  {
+    "id" : 32,
+    "question" : "Who is the Commander in Chief of the military?",
+    "answer" : "the President",
+    "score" : "(president)|(potus)",
+    "repeat" : 1
+  },
+  {
+    "id" : 33,
+    "question" : "Who signs bills to become laws?",
+    "answer" : "the President",
+    "score" : "(president)|(potus)",
+    "repeat" : 1
+  },
+  {
+    "id" : 34,
+    "question" : "Who vetoes bills?",
+    "answer" : "the President",
+    "score" : "(president)|(potus)",
+    "repeat" : 1
+  },
+  {
+    "id" : 35,
+    "question" : "What does the President’s Cabinet do?",
+    "answer" : "advises the President",
+    "score" : "advise.*((president)|(potus))",
+    "repeat" : 1
+  },
+  {
+    "id" : 36,
+    "question" : "What are two Cabinet-level positions?",
+    "answer" : "Secretary of Agriculture, Commerce, Defense, Education, Energy, Health and Human Services, Homeland Security, Housing and Urban Development, Interior, Labor, State, Transportation, Treasury, Veterans Affairs; Attorney General, Vice President",
+    "score" : "(agriculture)|(commerce)|(defense)|(education)|(energy)|(Health and Human Services)|(Homeland Security)|(Housing and Urban Development)|(Interior)|(Labor)|(State)|(Transportation)|(Treasury)|(Veterans Affairs)|(Attorney General)|(Vice President)",
+    "repeat" : 2
+  },
+  {
+    "id" : 37,
+    "question" : "What does the judicial branch do?",
+    "answer" : "reviews / explains laws; resolves disputes; decides if a law goes against the Constitution",
+    "score" : "(review.+law)|(explain.+law)|(resolve.+dispute)|(constitution)",
+    "repeat" : 1
+  },
+  {
+    "id" : 38,
+    "question" : "What is the highest court in the United States?",
+    "answer" : "the Supreme Court",
+    "score" : "(Supreme Court)|(scotus)",
+    "repeat" : 1
+  },
+  {
+    "id" : 39,
+    "question" : "How many justices are on the Supreme Court?",
+    "answer" : "9",
+    "score" : "(9)|(nine)",
+    "repeat" : 1
+  },
+  {
+    "id" : 40,
+    "question" : "Who is the Chief Justice of the United States now?",
+    "answer" : "John G. Roberts, Jr.",
+    "score" : "John Roberts",
+    "repeat" : 1
+  },
+  {
+    "id" : 41,
+    "question" : "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+    "answer" : "to print money, to declare war, to create an army, to make treaties",
+    "score" : "(print.+money)|(declare.+war)|(army)|(treat)",
+    "repeat" : 1
+  },
+  {
+    "id" : 42,
+    "question" : "Under our Constitution, some powers belong to the states. What is one power of the states?",
+    "answer" : "provide schooling and education, provide protection (police), provide safety (fire departments), give a driver’s license, approve zoning and land use",
+    "score" : "(schooling)|(education)|(protection)|(police)|(safety)|(fire)|(license)|(zoning)",
+    "repeat" : 1
+  },
+  {
+    "id" : 45,
+    "question" : "What are the two major political parties in the United States?",
+    "answer" : "Democratic and Republican",
+    "score" : "(democrat)|((republican)|(GOP))",
+    "repeat" : 2
+  },
+  {
+    "id" : 46,
+    "question" : "What is the political party of the President now?",
+    "answer" : "Democratic",
+    "score" : "Democrat",
+    "repeat" : 1
+  },
+  {
+    "id" : 47,
+    "question" : "What is the name of the Speaker of the House of Representatives now?",
+    "answer" : "Paul D. Ryan",
+    "score" : "Ryan",
+    "repeat" : 1
+  },
+  {
+    "id" : 48,
+    "question" : "There are four amendments to the Constitution about who can vote. Describe one of them.",
+    "answer" : "Citizens eighteen (18) and older (can vote). You don’t have to pay (a poll tax) to vote. Any citizen can vote (Women and men can vote). A male citizen of any race (can vote).",
+    "score" : "(18)|(eighteen)|(pay)|(women)|(race)",
+    "repeat" : 1
+  },
+  {
+    "id" : 49,
+    "question" : "What is one responsibility that is only for United States citizens?",
+    "answer" : "serve on a jury, vote in a federal election",
+    "score" : "(jury)|(vot)",
+    "repeat" : 1
+  },
+  {
+    "id" : 50,
+    "question" : "Name one right only for United States citizens.",
+    "answer" : "vote in a federal election, run for federal of office",
+    "score" : "(vot)|(run\\s+.*office)",
+    "repeat" : 1
+  },
+  {
+    "id" : 51,
+    "question" : "What are two rights of everyone living in the United States?",
+    "answer" : "freedom of expression, speech, assembly, petition the government, religion, the right to bear arms",
+    "score" : "(expression)|(speech)|(assembly)|(petition)|(religion)|(bear arm)",
+    "repeat" : 2
+  },
+  {
+    "id" : 52,
+    "question" : "What do we show loyalty to when we say the Pledge of Allegiance?",
+    "answer" : "the United States",
+    "score" : "(US)|(United States)|(flag)",
+    "repeat" : 1
+  },
+  {
+    "id" : 53,
+    "question" : "What is one promise you make when you become a United States citizen?",
+    "answer" : "give up loyalty to other countries, defend the Constitution and laws of the United States, obey the laws of the United States, serve in the U.S. military (if needed), serve (do important work for) the nation (if needed), be loyal to the United States",
+    "score" : "(loyal)|(defend\\s+.*Constitution)|(defend\\s+.*law)|(serve\\s+.*military)|(serve\\s+.*nation)",
+    "repeat" : 1
+  },
+  {
+    "id" : 54,
+    "question" : "How old do citizens have to be to vote for President?",
+    "answer" : "eighteen (18) and older",
+    "score" : "(18)|(eighteen)",
+    "repeat" : 1
+  },
+  {
+    "id" : 55,
+    "question" : "What are the two ways that Americans can participate in their democracy?",
+    "answer" : "vote, join a political party, help with a campaign, join a civic group, join a community group, give an elected official your opinion on an issue, call Senators and Representatives, publicly support or oppose an issue or policy, run for office, write to a newspaper",
+    "score" : "(vot)|(party)|(campaign)|(civic)|(community)|(newspaper)|(run\\s+.*office)|(call)|(public.*issue)",
+    "repeat" : 2
+  },
+  {
+    "id" : 56,
+    "question" : "When is the last day you can send in federal income tax forms?",
+    "answer" : "April 15th",
+    "score" : "(15.+Apr)|(Apr.+15)|(4.15)|(Apr.+fifteen)|(fifteen.+Apr)",
+    "repeat" : 1
+  },
+  {
+    "id" : 57,
+    "question" : "When must all men register for the Selective Service?",
+    "answer" : "between eighteen (18) and twenty-six (26)",
+    "score" : "(18)|(eighteen)",
+    "repeat" : 1
+  },
+  {
+    "id" : 58,
+    "question" : "What is one reason colonists came to America?",
+    "answer" : "freedom, political liberty, religious freedom, economic opportunity, practice their religion, escape persecution",
+    "score" : "(freedom)|(liberty)|(economic)|(religion)",
+    "repeat" : 1
+  },
+  {
+    "id" : 59,
+    "question" : "Who lived in America before the Europeans arrived?",
+    "answer" : "American Indians",
+    "score" : "(indian)|(native)",
+    "repeat" : 1
+  },
+  {
+    "id" : 60,
+    "question" : "What group of people was taken to America and sold as slaves?",
+    "answer" : "Africans",
+    "score" : "africa",
+    "repeat" : 1
+  },
+  {
+    "id" : 61,
+    "question" : "Why did the colonists fight the British?",
+    "answer" : "because of high taxes, British army stayed in their houses",
+    "score" : "(tax)|(stay.+house)|(self.+government)",
+    "repeat" : 1
+  },
+  {
+    "id" : 62,
+    "question" : "Who wrote the Declaration of Independence?",
+    "answer" : "Thomas Jefferson",
+    "score" : "Jefferson",
+    "repeat" : 1
+  },
+  {
+    "id" : 63,
+    "question" : "When was the Declaration of Independence adopted?",
+    "answer" : "July 4, 1776",
+    "score" : "(4.+Jul.+1776)|(Jul.+4.+1776)|(7.4.1776)|(Jul.+Four.+1776)|(Four.+Jul.+1776)|(Four.+Jul.+Seventeen Seventy Six)|(Jul.+Four.+Seventeen Seventy Six)",
+    "repeat" : 1
+  },
+  {
+    "id" : 64,
+    "question" : "There were 13 original states. Name three.",
+    "answer" : "New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina, Georgia",
+    "score" : "(New Hampshire)|(Massachusetts)|(Rhode Island)|(Connecticut)|(New York)|(New Jersey)|(Pennsylvania)|(Delaware)|(Maryland)|(Virginia)|(North Carolina)|(South Carolina)|(Georgia)",
+    "repeat" : 3
+  },
+  {
+    "id" : 65,
+    "question" : "What happened at the Constitutional Convention?",
+    "answer" : "The Constitution was written",
+    "score" : "Constitution",
+    "repeat" : 1
+  },
+  {
+    "id" : 66,
+    "question" : "When was the Constitution written?",
+    "answer" : "1787",
+    "score" : "(1787)|(Seventeen Eighty Seven)",
+    "repeat" : 1
+  },
+  {
+    "id" : 67,
+    "question" : "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+    "answer" : "James Madison, Alexander Hamilton, John Jay, Publius",
+    "score" : "(Madison)|(Hamilton)|(Jay)|(Publius)",
+    "repeat" : 1
+  },
+  {
+    "id" : 68,
+    "question" : "What is one thing Benjamin Franklin is famous for?",
+    "answer" : "U.S. diplomat, oldest member of the Constitutional Convention, first Postmaster General of the United States, started the first free libraries",
+    "score" : "(diplomat)|(Constitutional Convention)|(Postmaster General)|(free librar)",
+    "repeat" : 1
+  },
+  {
+    "id" : 69,
+    "question" : "Who is the Father of Our Country?",
+    "answer" : "George Washington",
+    "score" : "Washington",
+    "repeat" : 1
+  },
+  {
+    "id" : 70,
+    "question" : "Who was the first President?",
+    "answer" : "George Washington",
+    "score" : "Washington",
+    "repeat" : 1
+  },
+  {
+    "id" : 71,
+    "question" : "What territory did the United States buy from France in 1803?",
+    "answer" : "the Louisiana Territory",
+    "score" : "Louisiana",
+    "repeat" : 1
+  },
+  {
+    "id" : 72,
+    "question" : "Name one war fought by the United States in the 1800s.",
+    "answer" : "War of 1812, Mexican-American War, Civil War, Spanish-American War",
+    "score" : "((?=.*war)(?=.*1812))|((?=.*mexican)(?=.*american))|(civil war)|((?=.*spanish)(?=.*american))",
+    "repeat" : 1
+  },
+  {
+    "id" : 73,
+    "question" : "Name the U.S. war between the North and the South.",
+    "answer" : "the Civil War",
+    "score" : "(civil)|(states)",
+    "repeat" : 1
+  },
+  {
+    "id" : 74,
+    "question" : "Name one problem that led to the Civil War.",
+    "answer" : "slavery, economic reasons, states rights",
+    "score" : "(slave)|(economic)|(states)",
+    "repeat" : 1
+  },
+  {
+    "id" : 75,
+    "question" : "What was one important thing that Abraham Lincoln did?",
+    "answer" : "freed the slaves, saved the union, led the United States during the Civil War",
+    "score" : "(free.*slave)|(Emancipation)|(((save)|(preserve)).*union)|(civil.*war)",
+    "repeat" : 1
+  },
+  {
+    "id" : 76,
+    "question" : "What did the Emancipation Proclamation do?",
+    "answer" : "freed slaves",
+    "score" : "(?=.*free)(?=.*slave)",
+    "repeat" : 1
+  },
+  {
+    "id" : 77,
+    "question" : "What did Susan B. Anthony do?",
+    "answer" : "fought for womens rights",
+    "score" : "((women)|(civil))|(right)",
+    "repeat" : 1
+  },
+  {
+    "id" : 78,
+    "question" : "Name one war fought by the United States in the 1900s.",
+    "answer" : "World War I and II, Korean War, Vietnam War, Gulf War",
+    "score" : "(world)|(korean)|(vietnam)|(gulf)",
+    "repeat" : 1
+  },
+  {
+    "id" : 79,
+    "question" : "Who was President during World War I?",
+    "answer" : "Woodrow Wilson",
+    "score" : "Wilson",
+    "repeat" : 1
+  },
+  {
+    "id" : 80,
+    "question" : "Who was President during the Great Depression and World War II?",
+    "answer" : "Franklin Roosevelt",
+    "score" : "(Roosevelt)|(FDR)",
+    "repeat" : 1
+  },
+  {
+    "id" : 81,
+    "question" : "Who did the United States fight in World War II?",
+    "answer" : "Japan, Germany, and Italy",
+    "score" : "(?=.*japan)(?=.*germany)(?=.*italy)",
+    "repeat" : 1
+  },
+  {
+    "id" : 82,
+    "question" : "Before he was President, Eisenhower was a general. What war was he in?",
+    "answer" : "World War II",
+    "score" : "((world.*war)|(WW)).*((II)|(2)|(two))",
+    "repeat" : 1
+  },
+  {
+    "id" : 83,
+    "question" : "During the Cold War, what was the main concern of the United States?",
+    "answer" : "Communism",
+    "score" : "Communism",
+    "repeat" : 1
+  },
+  {
+    "id" : 84,
+    "question" : "What movement tried to end racial discrimination?",
+    "answer" : "civil rights (movement)",
+    "score" : "civil.*right",
+    "repeat" : 1
+  },
+  {
+    "id" : 85,
+    "question" : "What did Martin Luther King, Jr. do?",
+    "answer" : "fought for civil rights",
+    "score" : "(civil.*right)|(equality)",
+    "repeat" : 1
+  },
+  {
+    "id" : 86,
+    "question" : "What major event happened on September 11, 2001, in the United States?",
+    "answer" : "Terrorists attacked the United States.",
+    "score" : "(Terrorists)|(Terrorism)",
+    "repeat" : 1
+  },
+  {
+    "id" : 87,
+    "question" : "Name one American Indian tribe in the United States.",
+    "answer" : "Cherokee, Navajo, Sioux, Chippewa, Choctaw, Pueblo, Apache, Iroquois, Creek, Blackfeet, Seminole, Cheyenne, Arawak, Shawnee, Mohegan, Huron, Oneida, Lakota, Crow, Teton, Hopi, Inuit",
+    "score" : "(Cherokee)|(Navajo)|(Sioux)(Chippewa)|(Choctaw)|(Pueblo)|(Apache)|(Iroquois)|(Creek)|(Blackfeet)|(Seminole)|(Cheyenne)|(Arawak)|(Shawnee)|(Mohegan)|(Huron)|(Oneida)|(Lakota)|(Crow)|(Teton)|(Hopi)|(Inuit)",
+    "repeat" : 1
+  },
+  {
+    "id" : 88,
+    "question" : "Name one of the two longest rivers in the United States.",
+    "answer" : "Mississippi River or Missouri River",
+    "score" : "(Mississippi)|(Missouri)",
+    "repeat" : 1
+  },
+  {
+    "id" : 89,
+    "question" : "What ocean is on the West Coast of the United States?",
+    "answer" : "Pacific",
+    "score" : "Pacific",
+    "repeat" : 1
+  },
+  {
+    "id" : 90,
+    "question" : "What ocean is on the East Coast of the United States?",
+    "answer" : "Atlantic",
+    "score" : "Atlantic",
+    "repeat" : 1
+  },
+  {
+    "id" : 91,
+    "question" : "Name one U.S. territory.",
+    "answer" : "Puerto Rico, U.S. Virgin Islands, American Samoa, Northern Mariana Islands, Guam",
+    "score" : "(Puerto Rico)|(Virgin Island)|(American Samoa)|(Mariana Island)|(Guam)",
+    "repeat" : 1
+  },
+  {
+    "id" : 92,
+    "question" : "Name one state that borders Canada.",
+    "answer" : "Maine, New Hampshire, Vermont, New York, Pennsylvania, Ohio, Michigan, Minnesota, North Dakota, Montana, Idaho, Washington, Alaska",
+    "score" : "(Maine)|(New Hampshire)|(Vermont)|(New York)|(Pennsylvania)|(Ohio)|(Michigan)|(Minnesota)|(North Dakota)|(Montana)|(Idaho)|(Washington)|(Alaska)",
+    "repeat" : 1
+  },
+  {
+    "id" : 93,
+    "question" : "Name one state that borders Mexico.",
+    "answer" : "California, Arizona, New Mexico, Texas",
+    "score" : "(California)|(Arizona)|(New Mexico)|(Texas)",
+    "repeat" : 1
+  },
+  {
+    "id" : 94,
+    "question" : "What is the capital of the United States?",
+    "answer" : "Washington, D.C.",
+    "score" : "Washington.*D.*C",
+    "repeat" : 1
+  },
+  {
+    "id" : 95,
+    "question" : "Where is the Statue of Liberty?",
+    "answer" : "New York",
+    "score" : "(New York)|(New Jersey)|(Liberty Island)|(Hudson)",
+    "repeat" : 1
+  },
+  {
+    "id" : 96,
+    "question" : "Why does the flag have 13 stripes?",
+    "answer" : "because there were 13 original colonies",
+    "score" : "(original)|(colonies)",
+    "repeat" : 1
+  },
+  {
+    "id" : 97,
+    "question" : "Why does the flag have 50 stars?",
+    "answer" : "because there is one star for each state",
+    "score" : "state",
+    "repeat" : 1
+  },
+  {
+    "id" : 98,
+    "question" : "What is the name of the national anthem?",
+    "answer" : "The Star-Spangled Banner",
+    "score" : "Star.*Spangled Banner",
+    "repeat" : 1
+  },
+  {
+    "id" : 99,
+    "question" : "When do we celebrate Independence Day?",
+    "answer" : "July 4th",
+    "score" : "(Jul.* 4)|(7.4)|(4.+Jul)|(Four.+Jul)|(Jul.+Four)",
+    "repeat" : 1
+  },
+  {
+    "id" : 100,
+    "question" : "Name two national U.S. holidays.",
+    "answer" : "New Year’s Day, Martin Luther King, Jr. Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving, Christmas",
+    "score" : "(New Year)|(Martin Luther King)|(MLK)|(Memorial)|(Independence)|(4.+Jul)|(Jul.+4)|(7.4)|(Four.+Jul)|(Jul.+Four)|(Labor)|(Columbus)|(Veteran)|(Thanksgiving)|(Christmas)",
+    "repeat" : 2
+  }
+]

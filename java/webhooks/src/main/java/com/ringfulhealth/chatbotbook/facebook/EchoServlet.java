@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class EchoServlet extends BaseServlet {
 
     public EchoServlet () {
-        page_access_token = "YOUR-FB-PAGE-ACCESS-TOKEN";
+        page_access_token = "FB-PAGE-TOKEN";
     }
 
     public Object converse (String human, ConcurrentHashMap<String, Object> context) {

@@ -5,6 +5,44 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
+    <servlet>
+        <servlet-name>WatsonSpeechServlet</servlet-name>
+        <servlet-class>com.ringfulhealth.chatbotbook.WatsonSpeechServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WatsonSpeechServlet</servlet-name>
+        <url-pattern>/watson_speech</url-pattern>
+    </servlet-mapping>
+
+    <!-- Skype -->
+    <servlet>
+      <servlet-name>SkypeEchoBasicServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.skype.EchoBasicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SkypeEchoBasicServlet</servlet-name>
+      <url-pattern>/skype/echo_basic</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SkypeEchoServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.skype.EchoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SkypeEchoServlet</servlet-name>
+      <url-pattern>/skype/echo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>SkypeGreetServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.chatbotbook.skype.GreetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SkypeGreetServlet</servlet-name>
+      <url-pattern>/skype/greet</url-pattern>
+    </servlet-mapping>
+
+
     <!-- Facebook -->
     <servlet>
       <servlet-name>FacebookEchoBasicServlet</servlet-name>
@@ -31,6 +69,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     <servlet-mapping>
       <servlet-name>FacebookGreetServlet</servlet-name>
       <url-pattern>/facebook/greet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FacebookCivicsServlet</servlet-name>
+        <servlet-class>com.ringfulhealth.chatbotbook.facebook.CivicsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FacebookCivicsServlet</servlet-name>
+        <url-pattern>/facebook/civics</url-pattern>
     </servlet-mapping>
 
     <!-- Slack -->

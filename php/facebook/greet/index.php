@@ -1,5 +1,5 @@
 <?php
-  $page_access_token = "YOUR-FB-PAGE-ACCESS-TOKEN";
+  $page_access_token = "FB-PAGE-TOKEN";
   require_once ('../framework/base.php');
 
   function converse ($human, &$context) {
@@ -13,27 +13,26 @@
     if ($context['status'] == "wait_for_name") {
       $context['name'] = $human;
       $context['status'] = "wait_for_gender";
+
+      return createQuickReplies (
+        "It is great meeting you! What is your gender?",
+        array (
+          "Female" => "F",
+          "Male" => "M",
+          "Other" => "O"
+        )
+      );
    
-      $payload = array ();
-      $payload['template_type'] = "button";
-      $payload['text'] = "It is great meeting you! What is your gender?";
-      $payload['buttons'] = array ();
-      array_push($payload['buttons'], array (
-        "type" => "postback",
-        "title" => "Female",
-        "payload" => "F"
-      ));
-      array_push($payload['buttons'], array (
-        "type" => "postback",
-        "title" => "Male",
-        "payload" => "M"
-      ));
-      array_push($payload['buttons'], array (
-        "type" => "postback",
-        "title" => "Other",
-        "payload" => "O"
-      ));
-      return $payload;
+      /*
+      return createButtons (
+        "It is great meeting you! What is your gender?",
+        array (
+          "Female" => "F",
+          "Male" => "M",
+          "Other" => "O"
+        )
+      );
+      */
     }
 
     // The user responded to the bot's question about gender. We generate a response and set the status to NULL again so that we can start over.

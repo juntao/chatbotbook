@@ -3,12 +3,13 @@ package com.ringfulhealth.chatbotbook.facebook;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class GreetServlet extends BaseServlet {
 
     public GreetServlet () {
-        page_access_token = "YOUR-FB-PAGE-ACCESS-TOKEN";
+        page_access_token = "FB-PAGE-TOKEN";
     }
 
     public Object converse (String human, ConcurrentHashMap<String, Object> context) {
@@ -23,16 +24,26 @@ public class GreetServlet extends BaseServlet {
             context.put("status", "wait_for_gender");
 
             try {
-                JSONObject payload = new JSONObject();
-                payload.put("template_type", "button");
-                payload.put("text", "It is great meeting you! What is your gender?");
+                return createQuickReplies(
+                        "It is great meeting you! What is your gender?",
+                        new HashMap<String, String>(){{
+                            put("Female", "F");
+                            put("Male", "M");
+                            put("Other", "O");
+                        }}
+                );
 
-                String [] button_titles   = {"Female", "Male", "Other"};
-                String [] button_payloads = {"F", "M", "O"};
-
-                payload.put("buttons", createButtons(button_titles, button_payloads));
+                /*
+                JSONObject payload = createButtons(
+                        "It is great meeting you! What is your gender?",
+                        new HashMap<String, String>(){{
+                            put("Female", "F");
+                            put("Male", "M");
+                            put("Other", "O");
+                        }}
+                );
                 return payload;
-
+                */
             } catch (Exception e) {
                 e.printStackTrace();
             }

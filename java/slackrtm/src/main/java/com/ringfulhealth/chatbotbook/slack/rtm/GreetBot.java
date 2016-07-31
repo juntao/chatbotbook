@@ -14,7 +14,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class GreetBot extends BaseBot {
 
     public GreetBot () {
-        token = "YOUR-SLACK-BOT-TOKEN";
+        // token = "YOUR-SLACK-BOT-TOKEN";
+        token = "xoxb-36964407043-kIy2SKWeOaDFU1vf6UdndTYx";
     }
 
     public String converse (String human, ConcurrentHashMap<String, Object> context) {

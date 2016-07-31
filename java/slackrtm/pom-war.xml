@@ -1,0 +1,240 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ringfulhealth.chatbotbook.slack.rtm</groupId>
+  <artifactId>bot</artifactId>
+  <packaging>war</packaging>
+  <version>1.0</version>
+  <name>ringfulhealth - chatbothook - slackbot</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>official-repo</id>
+      <name>The official maven repo</name>
+      <url>http://repo1.maven.org/maven2/</url>
+    </repository>
+    <repository>
+      <id>jboss-repo</id>
+      <name>The JBoss maven repo</name>
+      <url>http://repository.jboss.org/</url>
+    </repository>
+    <repository>
+      <id>maven2-repository.java.net</id>
+      <name>Java.net Repository for Maven</name>
+      <url>http://download.java.net/maven/2/</url>
+      <layout>default</layout>
+    </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>**/context.xml</exclude>
+        </excludes>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4.3</version>
+        <configuration>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.0</version>
+        <configuration>
+          <webResources>
+            <resource>
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/context.xml</include>
+              </includes>
+              <filtering>true</filtering>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <extensions>
+        <extension>
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-webdav</artifactId>
+            <version>1.0-beta-2</version>
+        </extension>
+    </extensions>
+  </build>
+
+  <dependencies>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+        <scope>provided</scope>
+      </dependency>
+      
+      <dependency>
+        <groupId>jstl</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+<!--
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate</artifactId>
+        <version>3.2.5.ga</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>3.3.1.ga</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-annotations</artifactId>
+        <version>3.3.0.ga</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>3.0.0.ga</version>
+      </dependency>
+
+      <dependency>
+	<groupId>c3p0</groupId>
+	<artifactId>c3p0</artifactId>
+	<version>0.9.0.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>opensymphony</groupId>
+        <artifactId>quartz</artifactId>
+        <version>1.6.1</version>
+      </dependency>
+-->
+      
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.2.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.2.2</version>
+      </dependency>
+
+      <dependency>
+	<groupId>commons-io</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>2.2</version>
+      </dependency>
+            
+
+      <dependency>
+	<groupId>commons-beanutils</groupId>
+	<artifactId>commons-beanutils</artifactId>
+	<version>1.8.3</version>
+      </dependency>
+
+      <dependency>
+	<groupId>org.json</groupId>
+	<artifactId>json</artifactId>
+	<version>20090211</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.2.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.3.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.googlecode.libphonenumber</groupId>
+        <artifactId>libphonenumber</artifactId>
+        <version>3.3</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.markdownj</groupId>
+        <artifactId>markdownj</artifactId>
+        <version>0.3.0-1.0.2b4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.oauth-client</groupId>
+        <artifactId>google-oauth-client</artifactId>
+        <version>1.11.0-beta</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.oauth-client</groupId>
+        <artifactId>google-oauth-client-servlet</artifactId>
+        <version>1.11.0-beta</version>
+      </dependency>
+
+      <dependency>
+	<groupId>com.google.http-client</groupId>
+	<artifactId>google-http-client-jackson2</artifactId>
+	<version>1.11.0-beta</version>
+      </dependency>
+
+<!--
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.26</version>
+      </dependency>
+-->
+
+      <dependency>
+            <groupId>com.github.Ullink</groupId>
+            <artifactId>simple-slack-api</artifactId>
+            <version>0.5.1</version>
+        </dependency>
+        <!--  Gson: Java to Json conversion -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+  </dependencies>
+
+</project>

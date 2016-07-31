@@ -35,7 +35,7 @@ public class EchoBasicServlet extends HttpServlet {
             return;
         }
 
-        String page_access_token = "YOUR-FB-PAGE-ACCESS-TOKEN";
+        String page_access_token = "FB-PAGE-TOKEN";
 
         // Read POST body from request
         StringBuilder buffer = new StringBuilder();

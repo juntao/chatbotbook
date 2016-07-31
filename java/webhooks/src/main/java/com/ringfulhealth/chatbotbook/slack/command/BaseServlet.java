@@ -34,13 +34,19 @@ public abstract class BaseServlet extends HttpServlet {
         cache = new ConcurrentHashMap<String, ConcurrentHashMap<String, Object>> ();
     }
 
-    public abstract String converse (String human, ConcurrentHashMap<String, Object> context);
+    public abstract Object converse (String human, ConcurrentHashMap<String, Object> context);
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         doPost(req, resp);
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+
+        String message = req.getParameter("text");
+        if (message == null || message.trim().isEmpty()) {
+            // No message. Return now.
+            return;
+        }
 
         String chat_id = req.getParameter("token") + "_" + req.getParameter("user_name");
         ConcurrentHashMap<String, Object> context = cache.get(chat_id + "_context");
@@ -50,13 +56,19 @@ public abstract class BaseServlet extends HttpServlet {
 
         }
 
-        String bot_says = converse(req.getParameter("text"), context);
-        if (bot_says == null || bot_says.trim().isEmpty()) {
+        Object bot_says = converse(message.trim(), context);
+        if (bot_says == null) {
             bot_says = "Sorry, I cannot understand you!";
         }
 
-        resp.setContentType("text/plain");
-        resp.getOutputStream().println(bot_says);
+        if (bot_says instanceof String){
+            resp.setContentType("text/plain");
+            resp.getOutputStream().println((String) bot_says);
+        } else {
+            resp.setContentType("application/json");
+            resp.getOutputStream().println(bot_says.toString());
+        }
+
         return;
     }
 

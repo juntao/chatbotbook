@@ -28,6 +28,10 @@
       <url>http://download.java.net/maven/2/</url>
       <layout>default</layout>
     </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
   </repositories>
 
   <build>
@@ -208,6 +212,17 @@
 	<groupId>com.google.http-client</groupId>
 	<artifactId>google-http-client-jackson2</artifactId>
 	<version>1.11.0-beta</version>
+      </dependency>
+
+      <dependency>
+          <groupId>rome</groupId>
+          <artifactId>rome</artifactId>
+          <version>1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.jdom</groupId>
+          <artifactId>jdom</artifactId>
+          <version>1.1</version>
       </dependency>
 
 <!--

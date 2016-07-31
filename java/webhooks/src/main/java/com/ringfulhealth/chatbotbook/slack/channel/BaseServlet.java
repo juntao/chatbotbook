@@ -34,7 +34,7 @@ public abstract class BaseServlet extends HttpServlet {
         cache = new ConcurrentHashMap<String, ConcurrentHashMap<String, Object>> ();
     }
 
-    public abstract String converse (String human, ConcurrentHashMap<String, Object> context);
+    public abstract Object converse (String human, ConcurrentHashMap<String, Object> context);
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         doPost(req, resp);
@@ -42,6 +42,12 @@ public abstract class BaseServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         if ("slackbot".equalsIgnoreCase(req.getParameter("user_name"))) {
+            return;
+        }
+
+        String message = req.getParameter("text");
+        if (message == null || message.trim().isEmpty()) {
+            // No message. Return now.
             return;
         }
 
@@ -53,21 +59,28 @@ public abstract class BaseServlet extends HttpServlet {
 
         }
 
-        String bot_says = converse(req.getParameter("text"), context);
-        if (bot_says == null || bot_says.trim().isEmpty()) {
+        Object bot_says = converse(message.trim(), context);
+        if (bot_says == null) {
             bot_says = "Sorry, I cannot understand you!";
         }
 
-        JSONObject json = new JSONObject();
-        try {
-            json.put("text", bot_says);
-            json.put("mrkdwn", true);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (bot_says instanceof String) {
+            JSONObject json = new JSONObject();
+            try {
+                json.put("text", bot_says);
+                json.put("mrkdwn", true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            resp.setContentType("application/json");
+            resp.getOutputStream().println(json.toString());
+
+        } else {
+            resp.setContentType("application/json");
+            resp.getOutputStream().println(bot_says.toString());
         }
 
-        resp.setContentType("application/json");
-        resp.getOutputStream().println(json.toString());
         return;
     }
 
